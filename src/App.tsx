@@ -1,13 +1,14 @@
 import * as React from 'react';
 import './App.css';
-import Game from './component/Game/Game'
+import GameDisplayer from "./component/GameDisplayer/GameDisplayer";
+import {Game} from "./entities/game";
 const logo = require('./logo.svg');
 
 class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <Game></Game>
+                <GameDisplayer game={new Game()}></GameDisplayer>
             </div>
         );
     }

@@ -6,4 +6,17 @@ export class Position {
         this.row = _row;
         this.col = _col;
     }
+
+    setPosition(row: number, col: number) {
+        this.row = row;
+        this.col = col;
+    }
+
+    getColPosition() {
+        return this.col;
+    }
+
+    getRowPosition() {
+        return this.row;
+    }
 }
