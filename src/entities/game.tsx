@@ -2,21 +2,23 @@ import {Player} from './player';
 import {Referee} from './referee';
 import {GameStatus} from './game-status.enum';
 import {Board} from './board';
-import AIPlayer from "./AIPlayer";
 import HumanPlayer from "./humanPlayer";
+import {Position} from "./position";
 
-export class Game {
-    private board: Board = new Board();
+export abstract class Game {
+    protected board: Board = new Board();
     private player1: Player = new HumanPlayer();
     private player2: Player = new HumanPlayer();
     private currentPlayer: Player = this.player1;
-    private referee: Referee = new Referee();
+    protected referee: Referee = new Referee();
     private gameStatus: GameStatus = GameStatus.PENDING;
     private gameID?: string;
     private gameIndex?: number;
     private winner?: Player;
 
     constructor() {}
+
+    abstract tick(position: Position): void;
 
     getBoard(): Board {
         return this.board;

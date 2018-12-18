@@ -1,6 +1,6 @@
 export enum MarkerEnum {
     // O = 0, X = 1
-    O,
-    X,
-    NONE
+    O = 'O',
+    X = 'X',
+    NONE = ''
 }

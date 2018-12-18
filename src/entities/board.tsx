@@ -15,10 +15,10 @@ export class Board {
 
     initializeGrid(): void {
         this.grid = [];
-        for (let row = 0; row < this.gridSize; row++) {
+        for (let _row = 0; _row < this.gridSize; _row++) {
             this.grid.push([]);
-            for (let col = 0; col < this.gridSize; col++) {
-                this.grid[row].push(new GridSquare());
+            for (let _col = 0; _col < this.gridSize; _col++) {
+                this.grid[_row].push(new GridSquare(new Position(_row, _col)));
             }
         }
     }
@@ -41,7 +41,7 @@ export class Board {
 
     fillSquare(position: Position, marker: MarkerEnum): void {
         this.fillCount += 1;
-        this.grid[position.row][position.col].setMarker(marker);
+        this.grid[position.getRow()][position.getCol()].setMarker(marker);
     }
 
     getMarkersBoard(): MarkerEnum[][] {

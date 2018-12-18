@@ -14,25 +14,37 @@ export class Referee {
         } else if (game.getBoard().getFillCount() === game.getBoard().getMaxFill()) {
             game.setGameStatus(GameStatus.DRAW);
         } else {
-            // Player1 = X     Player2 = O
             if (game.getCurrentPlayer().equal(game.getPlayer1())) {
                 game.setCurrentPlayer(game.getPlayer2());
             } else {
                 game.setCurrentPlayer(game.getPlayer1());
             }
         }
+        console.log(game.getGameStatus());
+
         return game.getGameStatus();
     }
 
     checkWin(board: Board, _marker: MarkerEnum): boolean {
         const win = [_marker, _marker, _marker];
-        return board.getRow(0) === win
-            || board.getRow(1) === win
-            || board.getRow(2) === win
-            || board.getCol(0) === win
-            || board.getCol(1) === win
-            || board.getCol(2) === win
-            || board.getDiagonal('left') === win
-            || board.getDiagonal('right') === win;
+
+        return this.compareMethod(board.getRow(0), win)
+            || this.compareMethod(board.getRow(1),  win)
+            || this.compareMethod(board.getRow(2),  win)
+            || this.compareMethod(board.getCol(0),  win)
+            || this.compareMethod(board.getCol(1),  win)
+            || this.compareMethod(board.getCol(2),  win)
+            || this.compareMethod(board.getDiagonal('left'),  win)
+            || this.compareMethod(board.getDiagonal('right'),  win);
+    }
+
+    compareMethod(arr1: MarkerEnum[], arr2: MarkerEnum[]): boolean {
+        let equal = true;
+        arr1.forEach((marker, i) => {
+            if (arr2[i] !== marker) {
+                equal = false;
+            }
+        });
+        return equal;
     }
 }

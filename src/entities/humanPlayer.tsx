@@ -7,9 +7,12 @@ export default class HumanPlayer extends Player {
         super();
     }
 
-    makeMove(board: Board, position: Position): void {
-        if (position) {
-            board.fillSquare(position, super.getMarker());
-        }
+    // makeMove(board: Board, position: Position): void {
+    //     if (position) {
+    //         board.fillSquare(position, super.getMarker());
+    //     }
+    // }
+    makeMove(board: Board, _row: number, _col: number): void {
+        board.fillSquare(new Position(_row, _col), super.getMarker());
     }
 }

@@ -1,22 +1,22 @@
 export class Position {
-    public row: number;
-    public col: number;
+    private row: number;
+    private col: number;
 
     constructor(_row: number, _col: number) {
         this.row = _row;
         this.col = _col;
     }
 
-    setPosition(row: number, col: number) {
-        this.row = row;
-        this.col = col;
+    setPosition(_row: number, _col: number): void {
+        this.row = _row;
+        this.col = _col;
     }
 
-    getColPosition() {
+    getCol() {
         return this.col;
     }
 
-    getRowPosition() {
+    getRow() {
         return this.row;
     }
 }

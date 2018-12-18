@@ -17,7 +17,7 @@ export abstract class Player {
         return this.getMarker() === otherPlayer.getMarker();
     }
 
-    abstract makeMove(board: Board, position?: Position): void;
+    abstract makeMove(board: Board, _row?: number, _col?: number): void;
 
     setMarker(_marker: MarkerEnum): void {
         this.marker = _marker;
@@ -36,5 +36,13 @@ export abstract class Player {
 
     getScore(): number {
         return this.score;
+    }
+
+    setName(_name: string): void {
+        this.name = _name;
+    }
+
+    getName(): string {
+        return this.name;
     }
 }
