@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7522aed-fa9a-422f-8ce4-70a2f5b12379" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/AIPlayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/AIPlayer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/board.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -96,7 +98,7 @@
           <entry key="css" value="107" />
           <entry key="js" value="177" />
           <entry key="json" value="5" />
-          <entry key="tsx" value="20351" />
+          <entry key="tsx" value="21473" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -104,7 +106,7 @@
           <entry key="CSS" value="107" />
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="177" />
-          <entry key="TypeScript JSX" value="20351" />
+          <entry key="TypeScript JSX" value="21473" />
           <entry key="tsconfig" value="2" />
         </counts>
       </usages-collector>
@@ -175,8 +177,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/entities/AIPlayer.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="53" column="65" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
+            <state relative-caret-position="274">
+              <caret line="79" column="52" lean-forward="true" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="52" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -187,8 +189,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entities/board.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            <state relative-caret-position="329">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -222,7 +224,6 @@
         <option value="$PROJECT_DIR$/src/component/Game/Game.tsx" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.css" />
-        <option value="$PROJECT_DIR$/src/entities/board.tsx" />
         <option value="$PROJECT_DIR$/src/entities/position.tsx" />
         <option value="$PROJECT_DIR$/src/entities/marker.enum.tsx" />
         <option value="$PROJECT_DIR$/src/entities/gridSquare.tsx" />
@@ -242,6 +243,7 @@
         <option value="$PROJECT_DIR$/src/entities/game.tsx" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
         <option value="$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx" />
+        <option value="$PROJECT_DIR$/src/entities/board.tsx" />
         <option value="$PROJECT_DIR$/src/entities/AIPlayer.tsx" />
       </list>
     </option>
@@ -375,16 +377,15 @@
       <workItem from="1544904130350" duration="10814000" />
       <workItem from="1544939474154" duration="52000" />
       <workItem from="1544939546024" duration="35223000" />
-      <workItem from="1545095759425" duration="32293000" />
+      <workItem from="1545095759425" duration="34933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78382000" />
+    <option name="totallyTimeSpent" value="81022000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23859881" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -676,26 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/board.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -706,10 +687,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/board.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/entities/AIPlayer.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="53" column="65" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
+        <state relative-caret-position="274">
+          <caret line="79" column="52" lean-forward="true" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="52" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

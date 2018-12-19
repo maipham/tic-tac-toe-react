@@ -25,8 +25,41 @@ export default class AIPlayer extends Player {
         let opponentMarker = MarkerEnum.X;
         let stack: GameState[] = [];
         let originalStates: any = {};
-        let key = 1;
 
+        this.initializeGraph(startState, stack, currMarker, originalStates);
+        currMarker = this.switchMarker(currMarker);
+
+        let visited: GameState[] = [];
+        const referee = new Referee();
+        while (stack.length > 0) {
+            const currState = stack.pop();
+            if (currState !== undefined) {
+                if (this.isGoal(currState.board, playerMarker, referee)) {
+                    this.updateScore(originalStates, currState, true);
+                    console.log('Win boards: ' + originalStates['' + currState.key][1]);
+                } else if (this.isGoal(currState.board, opponentMarker, referee)) {
+                    this.updateScore(originalStates, currState, false);
+                    console.log('opponent win boards: ' + originalStates['' + currState.key][1]);
+                } else if (currState.board.isFull()) {
+                    console.log('DRAW');
+                } else {
+                    if (!this.contains(visited, currState)) {
+                        visited.push(currState);
+                        this.generateNeighbors(currState.board, currMarker, currState.key, stack);
+                        currMarker = this.switchMarker(currMarker);
+                    }
+                }
+            }
+        }
+        const bestState = this.getBestState(originalStates);
+        return bestState.position;
+    }
+
+    initializeGraph(startState: Board,
+                    stack: GameState[],
+                    currMarker: MarkerEnum,
+                    originalStates: any) {
+        let key = 0;
         startState.getGrid().forEach((row, i) => {
             row.forEach((square, j) => {
                 if (square.getMarker() === MarkerEnum.NONE) {
@@ -37,46 +70,21 @@ export default class AIPlayer extends Player {
                 }
             })
         });
+    }
 
-        currMarker = this.switchMarker(currMarker);
-
-        let visited: GameState[] = [];
-        const referee = new Referee();
-        while (stack.length > 0) {
-            const currState = stack.pop();
-            console.log('Stack size: ' + stack.length);
-            if (currState !== undefined) {
-                if (referee.checkWin(currState.board, playerMarker)) {
-                    originalStates['' + currState.key][1] = originalStates['' + currState.key][1] + 1;
-                    console.log('Win boards: ' + originalStates['' + currState.key][1]);
-                } else if (referee.checkWin(currState.board, opponentMarker)) {
-                    originalStates['' + currState.key][1] = originalStates['' + currState.key][1] - 1;
-                    console.log('opponent win boards: ' + originalStates['' + currState.key][1]);
-                } else if (currState.board.getFillCount() === currState.board.getMaxFill()) {
-                    console.log('DRAW');
-                } else {
-                    if (!this.contains(visited, currState)) {
-                        console.log('New');
-                        visited.push(currState);
-                        this.generateNeighbors(currState.board, currMarker, currState.key, stack);
-                        currMarker = this.switchMarker(currMarker);
-                    }
-                }
-            }
-        }
+    getBestState(originalStates: any): GameState {
         let bestScore = 0;
-        let bestState: GameState = new GameState(MarkerEnum.NONE, new Position(0, 0), game.getBoard(), 0);
+        let bestState: GameState = new GameState(MarkerEnum.NONE, new Position(0, 0), new Board(), 0);
         for (let key in originalStates) {
             if (originalStates.hasOwnProperty(key)) {
                 if (originalStates[key][1] > bestScore) {
                     bestScore = originalStates[key][1];
                     bestState = (originalStates[key][0] as GameState);
-
                 }
             }
         }
         console.log('Best Score: ' + bestScore);
-        return bestState.position;
+        return bestState;
     }
 
     contains(visited: GameState[], currState: GameState): boolean {
@@ -112,6 +120,16 @@ export default class AIPlayer extends Player {
         return stack;
     }
 
+    updateScore(originalStates: any, currState: GameState, win: boolean): void {
+        if (originalStates.hasOwnProperty(currState.key)) {
+            if (win) {
+                originalStates['' + currState.key][1] = originalStates['' + currState.key][1] + 1;
+            } else {
+                originalStates['' + currState.key][1] = originalStates['' + currState.key][1] - 1;
+            }
+        }
+    }
+
     cloneBoard(board: Board): Board {
         const newBoard = new Board();
         board.getGrid().forEach((row, i) => {
@@ -122,4 +140,7 @@ export default class AIPlayer extends Player {
         return newBoard;
     }
 
+    isGoal(board: Board, marker: MarkerEnum, referee: Referee): boolean {
+        return referee.checkWin(board, marker);
+    }
 }

@@ -39,6 +39,10 @@ export class Board {
         return this.maxFill;
     }
 
+    isFull(): boolean {
+        return this.fillCount === this.maxFill;
+    }
+
     fillSquare(position: Position, marker: MarkerEnum): void {
         this.fillCount += 1;
         this.grid[position.getRow()][position.getCol()].setMarker(marker);
