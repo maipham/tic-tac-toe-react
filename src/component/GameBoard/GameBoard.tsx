@@ -48,13 +48,20 @@ export default class GameBoard extends React.Component<GameBoardProp, GameBoardS
         const gap = 8;
         return (
             <div>
-                <Grid container={true} spacing={gap} justify={'center'}>
+                <Grid container={true}
+                      spacing={gap}
+                      justify={'center'} >
                     {this.props.game.getBoard().getGrid().map((row: GridSquare[], i) => {
                         return (
-                            <Grid container={true} key={i} justify={'center'} item={true} spacing={gap}>
+                            <Grid container={true}
+                                  item={true} key={i}
+                                  xs={12}
+                                  justify={'center'}
+                                  spacing={gap}>
                                 {row.map((square: GridSquare, j) => {
                                         return (
-                                            <Grid key={j} item={true}>
+                                            <Grid key={j}
+                                                  item={true}>
                                                 <Paper>
                                                     <SquareDisplayer game={this.props.game}
                                                                      square={square}

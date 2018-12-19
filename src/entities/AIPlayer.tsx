@@ -18,7 +18,7 @@ export default class AIPlayer extends Player {
         console.log(bestMove.getRow() + ' ' + bestMove.getCol());
     }
 
-    generateMove(game: Game): Position {
+    private generateMove(game: Game): Position {
         let startState = game.getBoard();
         const playerMarker = game.getCurrentPlayer().getPlayerMarker();
         let currMarker = game.getCurrentPlayer().getPlayerMarker();
@@ -55,7 +55,7 @@ export default class AIPlayer extends Player {
         return bestState.position;
     }
 
-    initializeGraph(startState: Board,
+    private initializeGraph(startState: Board,
                     stack: GameState[],
                     currMarker: MarkerEnum,
                     originalStates: any) {
@@ -72,7 +72,7 @@ export default class AIPlayer extends Player {
         });
     }
 
-    getBestState(originalStates: any): GameState {
+    private getBestState(originalStates: any): GameState {
         let bestScore = 0;
         let bestState: GameState = new GameState(MarkerEnum.NONE, new Position(0, 0), new Board(), 0);
         for (let key in originalStates) {
@@ -87,7 +87,7 @@ export default class AIPlayer extends Player {
         return bestState;
     }
 
-    contains(visited: GameState[], currState: GameState): boolean {
+    private contains(visited: GameState[], currState: GameState): boolean {
         let equal = false;
         visited.forEach((state) => {
             state.board.getGrid().forEach((row, i) => {
@@ -99,14 +99,14 @@ export default class AIPlayer extends Player {
         return equal;
     }
 
-    switchMarker(currMarker: MarkerEnum): MarkerEnum {
+    private switchMarker(currMarker: MarkerEnum): MarkerEnum {
         if (currMarker === MarkerEnum.X) {
             return MarkerEnum.O;
         }
         return MarkerEnum.X;
     }
 
-    generateNeighbors(board: Board, marker: MarkerEnum, key: number, stack: GameState[]): GameState[] {
+    private generateNeighbors(board: Board, marker: MarkerEnum, key: number, stack: GameState[]): GameState[] {
         let currMarker = marker;
         board.getGrid().forEach((row, i) => {
             row.forEach((square, j) => {
@@ -120,7 +120,7 @@ export default class AIPlayer extends Player {
         return stack;
     }
 
-    updateScore(originalStates: any, currState: GameState, win: boolean): void {
+    private updateScore(originalStates: any, currState: GameState, win: boolean): void {
         if (originalStates.hasOwnProperty(currState.key)) {
             if (win) {
                 originalStates['' + currState.key][1] = originalStates['' + currState.key][1] + 1;
@@ -130,7 +130,7 @@ export default class AIPlayer extends Player {
         }
     }
 
-    cloneBoard(board: Board): Board {
+    private cloneBoard(board: Board): Board {
         const newBoard = new Board();
         board.getGrid().forEach((row, i) => {
             row.forEach((square, j) => {
@@ -140,7 +140,7 @@ export default class AIPlayer extends Player {
         return newBoard;
     }
 
-    isGoal(board: Board, marker: MarkerEnum, referee: Referee): boolean {
+    private isGoal(board: Board, marker: MarkerEnum, referee: Referee): boolean {
         return referee.checkWin(board, marker);
     }
 }
