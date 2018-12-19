@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import {MarkerEnum} from "../../entities/marker.enum";
 import {Game} from "../../entities/game";
 import {GameStatus} from "../../entities/game-status.enum";
+import {AIGame} from "../../entities/AIGame";
+import AIPlayer from "../../entities/AIPlayer";
 
 interface SquareDisplayerProp {
     game: Game;
@@ -40,11 +42,22 @@ export default class SquareDisplayer extends React.Component<SquareDisplayerProp
     };
 
     handler = () => {
+        console.log(this.props.game.getGameStatus());
         this.props.game.tick(this.props.square.getPosition());
-        this.setState({ //
+        this.setState({
             marker: this.props.square.getMarker(),
             game: this.props.game
         });
+        console.log(this.props.game.getBoard());
+        if (this.props.game.getCurrentPlayer() instanceof AIPlayer) {
+            console.log("I am a bot");
+            this.props.game.tick(this.props.square.getPosition());  //passed in position is neglected
+        //     newGame = Object.assign({}, this.props.game);
+        //     this.setState({
+        //         marker: this.props.square.getMarker(),
+        //         game: newGame
+        //     });
+        }
     };
 
     setSize(): void {
@@ -55,6 +68,7 @@ export default class SquareDisplayer extends React.Component<SquareDisplayerProp
 
     componentDidMount() {
         this.updateWindowDimensions();
+        document.title = 'Tic Tac Toe';
         window.addEventListener('resize', this.updateWindowDimensions);
     }
 

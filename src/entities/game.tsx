@@ -5,7 +5,7 @@ import {Board} from './board';
 import HumanPlayer from "./humanPlayer";
 import {Position} from "./position";
 
-export abstract class Game {
+export class Game {
     protected board: Board = new Board();
     private player1: Player = new HumanPlayer();
     private player2: Player = new HumanPlayer();
@@ -16,9 +16,17 @@ export abstract class Game {
     private gameIndex?: number;
     private winner?: Player;
 
-    constructor() {}
+    constructor(_player1: Player, _player2: Player) {
+        this.player1 = _player1;
+        this.player2 = _player2;
+    }
 
-    abstract tick(position: Position): void;
+    tick(position: Position): void {
+        if (this.getGameStatus() === GameStatus.PLAYING) {
+            this.getCurrentPlayer().makeMove(this, position.getRow(), position.getCol());
+            this.referee.observeGame(this);
+        }
+    }
 
     getBoard(): Board {
         return this.board;

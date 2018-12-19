@@ -2,6 +2,7 @@ import {PlayerStatus} from './player-status.enum';
 import {Position} from './position';
 import {MarkerEnum} from "./marker.enum";
 import {Board} from "./board";
+import {Game} from "./game";
 
 export abstract class Player {
     private name: string = '';
@@ -14,16 +15,16 @@ export abstract class Player {
     }
 
     equal(otherPlayer: Player): boolean {
-        return this.getMarker() === otherPlayer.getMarker();
+        return this.getPlayerMarker() === otherPlayer.getPlayerMarker();
     }
 
-    abstract makeMove(board: Board, _row?: number, _col?: number): void;
+    abstract makeMove(game: Game, _row?: number, _col?: number): void;
 
-    setMarker(_marker: MarkerEnum): void {
+    setPlayerMarker(_marker: MarkerEnum): void {
         this.marker = _marker;
     }
 
-    getMarker(): MarkerEnum {
+    getPlayerMarker(): MarkerEnum {
         return this.marker;
     }
 

@@ -7,7 +7,7 @@ export class Referee {
     constructor() {}
 
     observeGame(game: Game): GameStatus {
-        if (this.checkWin(game.getBoard(), game.getCurrentPlayer().getMarker())) {
+        if (this.checkWin(game.getBoard(), game.getCurrentPlayer().getPlayerMarker())) {
             game.setGameStatus(GameStatus.WIN);
             game.setWinner(game.getCurrentPlayer());
             game.getCurrentPlayer().addScore();
@@ -20,7 +20,7 @@ export class Referee {
                 game.setCurrentPlayer(game.getPlayer1());
             }
         }
-        console.log(game.getGameStatus());
+        // console.log(game.getGameStatus());
 
         return game.getGameStatus();
     }
