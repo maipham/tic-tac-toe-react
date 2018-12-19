@@ -15,19 +15,18 @@ export default class AIPlayer extends Player {
     makeMove(game: Game, row?: number, col?: number): void {
         const bestMove: Position = this.generateMove(game);
         game.getBoard().fillSquare(bestMove, super.getPlayerMarker());
-        console.log('moved');
         console.log(bestMove.getRow() + ' ' + bestMove.getCol());
     }
 
     generateMove(game: Game): Position {
-        let startState = this.cloneBoard(game.getBoard());
-        const originalMarker = game.getCurrentPlayer().getPlayerMarker();
+        let startState = game.getBoard();
+        const playerMarker = game.getCurrentPlayer().getPlayerMarker();
         let currMarker = game.getCurrentPlayer().getPlayerMarker();
         let opponentMarker = MarkerEnum.X;
         let stack: GameState[] = [];
         let originalStates: any = {};
         let key = 1;
-        let visited: GameState[] = [];
+
         startState.getGrid().forEach((row, i) => {
             row.forEach((square, j) => {
                 if (square.getMarker() === MarkerEnum.NONE) {
@@ -38,20 +37,30 @@ export default class AIPlayer extends Player {
                 }
             })
         });
+
         currMarker = this.switchMarker(currMarker);
 
+        let visited: GameState[] = [];
         const referee = new Referee();
         while (stack.length > 0) {
             const currState = stack.pop();
+            console.log('Stack size: ' + stack.length);
             if (currState !== undefined) {
-                if (referee.checkWin(currState.board, originalMarker)) {
-                    originalStates['' + currState.key][1]++;
+                if (referee.checkWin(currState.board, playerMarker)) {
+                    originalStates['' + currState.key][1] = originalStates['' + currState.key][1] + 1;
+                    console.log('Win boards: ' + originalStates['' + currState.key][1]);
                 } else if (referee.checkWin(currState.board, opponentMarker)) {
-                    originalStates['' + currState.key][1]--;
-                } else if (!this.contains(visited, currState)) {
-                    visited.push(currState);
-                    this.generateNeighbors(currState.board, currMarker, currState.key, stack);
-                    currMarker = this.switchMarker(currMarker);
+                    originalStates['' + currState.key][1] = originalStates['' + currState.key][1] - 1;
+                    console.log('opponent win boards: ' + originalStates['' + currState.key][1]);
+                } else if (currState.board.getFillCount() === currState.board.getMaxFill()) {
+                    console.log('DRAW');
+                } else {
+                    if (!this.contains(visited, currState)) {
+                        console.log('New');
+                        visited.push(currState);
+                        this.generateNeighbors(currState.board, currMarker, currState.key, stack);
+                        currMarker = this.switchMarker(currMarker);
+                    }
                 }
             }
         }
@@ -66,20 +75,20 @@ export default class AIPlayer extends Player {
                 }
             }
         }
+        console.log('Best Score: ' + bestScore);
         return bestState.position;
     }
 
     contains(visited: GameState[], currState: GameState): boolean {
+        let equal = false;
         visited.forEach((state) => {
             state.board.getGrid().forEach((row, i) => {
                 row.forEach((square, j) => {
-                    if (currState.board.getGrid()[i][j].getMarker() !== square.getMarker()) {
-                        return false;
-                    }
+                    equal = currState.board.getGrid()[i][j].getMarker().valueOf() === square.getMarker().valueOf();
                 })
             })
         });
-        return true;
+        return equal;
     }
 
     switchMarker(currMarker: MarkerEnum): MarkerEnum {
@@ -107,9 +116,7 @@ export default class AIPlayer extends Player {
         const newBoard = new Board();
         board.getGrid().forEach((row, i) => {
             row.forEach((square, j) => {
-                const newSquare = new GridSquare(new Position(i, j));
-                newSquare.setMarker(board.getGrid()[i][j].getMarker());
-                newBoard.getGrid()[i][j] = newSquare;
+                newBoard.fillSquare(new Position(i, j), board.getGrid()[i][j].getMarker());
             })
         });
         return newBoard;
