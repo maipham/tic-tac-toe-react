@@ -1,7 +1,6 @@
 import {Position} from './position';
 import {MarkerEnum} from "./marker.enum";
 import GridSquare from "./gridSquare";
-import {Player} from "./player";
 
 export class Board {
     private fillCount = 0;
@@ -25,6 +24,7 @@ export class Board {
 
     resetGame(): void {
         this.initializeGrid();
+        this.fillCount = 0;
     }
 
 

@@ -13,8 +13,8 @@ export default class BotPlayer extends Player {
 
     makeMove(game: Game, row?: number, col?: number): void {
         const startState = new GameState(game.getCurrentPlayer().getPlayerMarker(), game.getBoard(), new Position(-1, -1));
-        // const bestScore: GameScore = this.generateMove(startState, game.getReferee(), 0);
-        const bestScore: GameScore = this.generateMove2(startState, game.getReferee());
+        const bestScore: GameScore = this.generateMove(startState, game.getReferee(), 0);
+        // const bestScore: GameScore = this.generateMove2(startState, game.getReferee());
         const bestMove: Position = bestScore.state.position;
         game.getBoard().fillSquare(bestMove, super.getPlayerMarker());
         console.log("bot move: " + bestMove.getRow() + ' ' + bestMove.getCol());

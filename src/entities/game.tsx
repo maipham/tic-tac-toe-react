@@ -15,7 +15,7 @@ export abstract class Game {
     protected gameStatus: GameStatus = GameStatus.PLAYING;
     protected gameID?: string;
     protected gameIndex?: number;
-    protected winner?: Player;
+    protected winner: Player = new HumanPlayer();
 
     constructor() {
     }
@@ -31,11 +31,15 @@ export abstract class Game {
         return this.board;
     }
 
+    newBoard(): void {
+        this.board = new Board();
+    }
+
     setWinner(player: Player): void {
         this.winner = player;
     }
 
-    getWinner(): Player | undefined {
+    getWinner(): Player {
         return this.winner;
     }
 

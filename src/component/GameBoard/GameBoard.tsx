@@ -5,8 +5,6 @@ import SquareDisplayer from "../SquareDisplayer/SquareDisplayer";
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import {Game} from "../../entities/game";
-import ScoreBoard from "../ScoreBoard/ScoreBoard";
-import {Board} from "../../entities/board";
 
 interface GameBoardProp {
     game: Game;
@@ -52,7 +50,7 @@ export default class GameBoard extends React.Component<GameBoardProp, GameBoardS
             <div>
                 <Grid container={true}
                       spacing={gap}
-                      justify={'center'} >
+                      justify={'center'}>
                     {grid.map((row: GridSquare[], i) => {
                         return (
                             <Grid container={true}
@@ -67,7 +65,7 @@ export default class GameBoard extends React.Component<GameBoardProp, GameBoardS
                                                 <Paper>
                                                     <SquareDisplayer game={this.props.game}
                                                                      square={square}
-                                                                     _space={gap}
+                                                                     space={gap}
                                                                      updateGame={this.props.updateGame}/>
                                                 </Paper>
                                             </Grid>
@@ -78,9 +76,6 @@ export default class GameBoard extends React.Component<GameBoardProp, GameBoardS
                         )
                     })}
                 </Grid>
-                <ScoreBoard player1={this.props.game.getPlayer1()}
-                            player2={this.props.game.getPlayer2()}
-                            updateGame={this.props.updateGame}/>
             </div>
         );
     }

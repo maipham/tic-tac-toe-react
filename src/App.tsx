@@ -12,7 +12,8 @@ interface AppState {
 export default class App extends React.Component<AppProp, AppState> {
     constructor(props: Readonly<AppProp>) {
         super(props);
-        this.state = {}
+        this.state = {};
+        document.title = 'Tic Tac Toe';
     }
     render() {
         return (

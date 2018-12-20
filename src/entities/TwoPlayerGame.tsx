@@ -8,8 +8,8 @@ export class TwoPlayerGame extends Game{
         super();
         this.player1.setPlayerMarker(MarkerEnum.X);
         this.player2.setPlayerMarker(MarkerEnum.O);
-        this.player1.setName('Mai');
-        this.player2.setName('Trai');
+        this.player1.setName(MarkerEnum.X);
+        this.player2.setName(MarkerEnum.O);
     }
 
     tick(position: Position): void {
