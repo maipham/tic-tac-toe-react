@@ -1,6 +1,5 @@
 import {Player} from "./player";
 import {Position} from './position';
-import {Board} from "./board";
 import {Game} from "./game";
 
 export default class HumanPlayer extends Player {

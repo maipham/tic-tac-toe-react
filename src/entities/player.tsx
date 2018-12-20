@@ -1,18 +1,12 @@
-import {PlayerStatus} from './player-status.enum';
-import {Position} from './position';
 import {MarkerEnum} from "./marker.enum";
-import {Board} from "./board";
 import {Game} from "./game";
 
 export abstract class Player {
     private name: string = '';
-    private playerStatus: PlayerStatus = PlayerStatus.IDLE;
     private marker: MarkerEnum = MarkerEnum.NONE;
     private score: number = 0;
-    private gameID: string = '';
 
-    constructor() {
-    }
+    protected constructor() {}
 
     equal(otherPlayer: Player): boolean {
         return this.getPlayerMarker() === otherPlayer.getPlayerMarker();
@@ -26,9 +20,6 @@ export abstract class Player {
 
     getPlayerMarker(): MarkerEnum {
         return this.marker;
-    }
-
-    withDraw(): void {
     }
 
     addScore(): void {

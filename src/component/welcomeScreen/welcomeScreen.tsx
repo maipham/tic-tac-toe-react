@@ -77,7 +77,6 @@ export default class welcomeScreen extends React.Component<welcomeScreenProp, we
                                 value="end"
                                 label="Play with a friend"
                                 labelPlacement="end"
-                                style={{color: '#283593'}}
                                 control={
                                     <Radio
                                         checked={this.state.selectedValue === 'friend'}
@@ -105,15 +104,24 @@ export default class welcomeScreen extends React.Component<welcomeScreenProp, we
                                 }
                             />
                         </Grid>
+                        <Grid item={true} style={{width: '30px'}}/>
                         <Grid item={true}>
-                            <Button onClick={this.resetGame}> Reset Game </Button>
-                        </Grid>
-                        <Grid item={true}>
-                            {gameOver && <Button onClick={this.resetBoard} style={{paddingTop: '0', paddingBottom: '0'}}> Next Round </Button> }
+                            <Button onClick={this.resetGame}
+                                    style={{marginTop: '6px', marginBottom: '6px',
+                                        paddingBottom: '0', paddingTop: '0'}}>
+                                Reset Game </Button>
                         </Grid>
                     </Grid>
                     <Grid item={true}>
                         <GameDisplayer game={this.state.game} updateGame={this.updateGame}/>
+                    </Grid>
+                    <Grid item={true}>
+                        {gameOver &&
+                        <Button onClick={this.resetBoard}
+                                style={{marginTop: '6px', marginBottom: '6px',
+                                    paddingBottom: '0', paddingTop: '0'}}>
+                            Next Round </Button>
+                        }
                     </Grid>
                 </Grid>
             </Grid>

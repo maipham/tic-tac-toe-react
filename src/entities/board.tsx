@@ -22,12 +22,6 @@ export class Board {
         }
     }
 
-    resetGame(): void {
-        this.initializeGrid();
-        this.fillCount = 0;
-    }
-
-
     getGrid(): GridSquare[][] {
         return this.grid;
     }
@@ -47,17 +41,6 @@ export class Board {
     fillSquare(position: Position, marker: MarkerEnum): void {
         this.fillCount += 1;
         this.grid[position.getRow()][position.getCol()].setMarker(marker);
-    }
-
-    getMarkersBoard(): MarkerEnum[][] {
-        let markerBoard: MarkerEnum[][] = [];
-        for (let row = 0; row < this.gridSize; row++) {
-            markerBoard.push([]);
-            for (let col = 0; col < this.gridSize; col++) {
-                markerBoard[row].push(this.grid[row][col].getMarker());
-            }
-        }
-        return markerBoard;
     }
 
     getCol(_col: number): MarkerEnum[] {
