@@ -1,19 +1,12 @@
-
 import * as React from 'react';
 import './welcomeScreen.css';
-import Button from '@material-ui/core/Button';
 import Radio from '@material-ui/core/Radio';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
-
 import Grid from '@material-ui/core/Grid';
 import GameDisplayer from "../GameDisplayer/GameDisplayer";
 import {Game} from "../../entities/game";
-import HumanPlayer from "../../entities/humanPlayer";
-import AIPlayer from "../../entities/AIPlayer";
 import {TwoPlayerGame} from "../../entities/TwoPlayerGame";
-import {AIGame} from "../../entities/AIGame";
+import {BotGame} from "../../entities/BotGame";
 
 interface welcomeScreenProp {
 }
@@ -34,7 +27,7 @@ export default class welcomeScreen extends React.Component<welcomeScreenProp, we
 
     playWithBot = () => {
         this.setState({
-            game: new AIGame()
+            game: new BotGame()
         });
         this.setState({
             selectedValue: 'bot' });

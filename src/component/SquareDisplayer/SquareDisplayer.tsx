@@ -5,8 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import {MarkerEnum} from "../../entities/marker.enum";
 import {Game} from "../../entities/game";
 import {GameStatus} from "../../entities/game-status.enum";
-import {AIGame} from "../../entities/AIGame";
-import AIPlayer from "../../entities/AIPlayer";
+import {BotGame} from "../../entities/BotGame";
+import BotPlayer from "../../entities/BotPlayer";
 
 interface SquareDisplayerProp {
     game: Game;

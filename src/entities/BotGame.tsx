@@ -1,17 +1,17 @@
 import {Position} from "./position";
 import {Game} from "./game";
 import {GameStatus} from "./game-status.enum";
-import AIPlayer from "./AIPlayer";
+import BotPlayer from "./BotPlayer";
 import {MarkerEnum} from "./marker.enum";
 
-export class AIGame extends Game{
+export class BotGame extends Game{
     constructor() {
         super();
-        this.player2 = new AIPlayer();
+        this.player2 = new BotPlayer();
         this.player1.setPlayerMarker(MarkerEnum.X);
         this.player2.setPlayerMarker(MarkerEnum.O);
-        this.player2.setName('Bot');
-        this.player1.setName('You');
+        this.player2.setName('O');
+        this.player1.setName('X');
     }
 
     tick(position: Position): void {
