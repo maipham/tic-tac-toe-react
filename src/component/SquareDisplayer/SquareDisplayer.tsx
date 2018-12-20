@@ -42,22 +42,15 @@ export default class SquareDisplayer extends React.Component<SquareDisplayerProp
     };
 
     handler = () => {
-        console.log(this.props.game.getGameStatus());
+        // if (this.props.game.emptySquare(this.props.square.getPosition())) {
+        // }
+        console.log(this.props.game);
         this.props.game.tick(this.props.square.getPosition());
         this.setState({
             marker: this.props.square.getMarker(),
             game: this.props.game
         });
-        console.log(this.props.game.getBoard());
-        if (this.props.game.getCurrentPlayer() instanceof AIPlayer) {
-            console.log("I am a bot");
-            this.props.game.tick(this.props.square.getPosition());  //passed in position is neglected
-        //     newGame = Object.assign({}, this.props.game);
-        //     this.setState({
-        //         marker: this.props.square.getMarker(),
-        //         game: newGame
-        //     });
-        }
+        console.log(this.props.game.getGameStatus());
     };
 
     setSize(): void {

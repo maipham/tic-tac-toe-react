@@ -15,7 +15,6 @@ export default class ScoreBoard extends React.Component<ScoreBoardProp, ScoreBoa
     constructor(props: Readonly<ScoreBoardProp>) {
         super(props);
         this.state = {
-
         };
     };
 
@@ -24,7 +23,6 @@ export default class ScoreBoard extends React.Component<ScoreBoardProp, ScoreBoa
         const player2Name = this.props.player2.getName();
         const player1Score = this.props.player1.getScore();
         const player2Score = this.props.player2.getScore();
-        const _justify = 'center';
         const style = {
             backgroundColor: '#8c9eff',
             width: 'fit-content',

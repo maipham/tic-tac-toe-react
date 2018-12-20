@@ -10,19 +10,13 @@ interface GameDisplayerProp {
 }
 
 interface GameDisplayerState {
-    game: Game;
 }
 
 export default class GameDisplayer extends React.Component<GameDisplayerProp, GameDisplayerState> {
     constructor(props: Readonly<GameDisplayerProp>) {
         super(props);
         this.state = {
-            game: this.props.game,
         };
-    };
-
-    updateGameState = () => {
-
     };
 
     render() {
@@ -32,7 +26,6 @@ export default class GameDisplayer extends React.Component<GameDisplayerProp, Ga
         return (
 
             <div style={style}>
-                <h1>Tic Tac Toe</h1>
                 <GameBoard game={this.props.game}/>
             </div>
         );

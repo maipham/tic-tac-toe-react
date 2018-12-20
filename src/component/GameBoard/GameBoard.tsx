@@ -15,7 +15,6 @@ interface GameBoardProp {
 interface GameBoardState {
     width: number;
     height: number;
-    game: Game;
 }
 
 export default class GameBoard extends React.Component<GameBoardProp, GameBoardState> {
@@ -25,7 +24,6 @@ export default class GameBoard extends React.Component<GameBoardProp, GameBoardS
         this.state = {
             width: 0,
             height: 0,
-            game: this.props.game,
         };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     };
@@ -46,12 +44,13 @@ export default class GameBoard extends React.Component<GameBoardProp, GameBoardS
 
     render() {
         const gap = 8;
+        const grid = this.props.game.getBoard().getGrid();
         return (
             <div>
                 <Grid container={true}
                       spacing={gap}
                       justify={'center'} >
-                    {this.props.game.getBoard().getGrid().map((row: GridSquare[], i) => {
+                    {grid.map((row: GridSquare[], i) => {
                         return (
                             <Grid container={true}
                                   item={true} key={i}
@@ -75,7 +74,7 @@ export default class GameBoard extends React.Component<GameBoardProp, GameBoardS
                         )
                     })}
                 </Grid>
-                <ScoreBoard player1={this.state.game.getPlayer1()} player2={this.state.game.getPlayer2()}/>
+                <ScoreBoard player1={this.props.game.getPlayer1()} player2={this.props.game.getPlayer2()}/>
             </div>
         );
     }

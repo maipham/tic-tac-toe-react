@@ -27,6 +27,7 @@ export class Board {
         this.initializeGrid();
     }
 
+
     getGrid(): GridSquare[][] {
         return this.grid;
     }
@@ -92,5 +93,17 @@ export class Board {
                 break;
         }
         return diagonal;
+    }
+
+    emptySquares(): GridSquare[] {
+        const empty: GridSquare[] = [];
+        this.grid.forEach(row => {
+            row.forEach(square => {
+                if (square.getMarker() === MarkerEnum.NONE) {
+                    empty.push(square);
+                }
+            });
+        });
+        return empty;
     }
 }

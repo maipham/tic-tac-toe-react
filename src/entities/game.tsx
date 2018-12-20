@@ -4,28 +4,27 @@ import {GameStatus} from './game-status.enum';
 import {Board} from './board';
 import HumanPlayer from "./humanPlayer";
 import {Position} from "./position";
+import {MarkerEnum} from "./marker.enum";
 
-export class Game {
+export abstract class Game {
     protected board: Board = new Board();
-    private player1: Player = new HumanPlayer();
-    private player2: Player = new HumanPlayer();
-    private currentPlayer: Player = this.player1;
+    protected player1: Player = new HumanPlayer();
+    protected player2: Player = new HumanPlayer();
+    protected currentPlayer: Player = this.player1;
     protected referee: Referee = new Referee();
-    private gameStatus: GameStatus = GameStatus.PENDING;
-    private gameID?: string;
-    private gameIndex?: number;
-    private winner?: Player;
+    protected gameStatus: GameStatus = GameStatus.PLAYING;
+    protected gameID?: string;
+    protected gameIndex?: number;
+    protected winner?: Player;
 
-    constructor(_player1: Player, _player2: Player) {
-        this.player1 = _player1;
-        this.player2 = _player2;
+    constructor() {
     }
 
-    tick(position: Position): void {
-        if (this.getGameStatus() === GameStatus.PLAYING) {
-            this.getCurrentPlayer().makeMove(this, position.getRow(), position.getCol());
-            this.referee.observeGame(this);
-        }
+    abstract tick(position: Position): void;
+    abstract toString(): string;
+
+    emptySquare(position: Position): boolean {
+        return this.board.getGrid()[position.getRow()][position.getCol()].getMarker() === MarkerEnum.NONE;
     }
 
     getBoard(): Board {
