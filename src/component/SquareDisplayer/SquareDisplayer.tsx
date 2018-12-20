@@ -12,6 +12,7 @@ interface SquareDisplayerProp {
     game: Game;
     square: GridSquare;
     _space: number;
+    updateGame: () => void;
 }
 
 interface SquareDisplayerState {
@@ -22,19 +23,24 @@ interface SquareDisplayerState {
 }
 
 export default class SquareDisplayer extends React.Component<SquareDisplayerProp, SquareDisplayerState> {
-    name = 'square';
-    defaultSize = 150;
-    _size = this.defaultSize;
-    _ratio = 1 / 5;
+    _squareDefSize = 150;
+    _textDefSize = 100;
+    _size = this._squareDefSize;
+    _squareRatio = 1 / 5;
     _spacing = this.props._space;
+    _textRatio = 1/3;
+    _textSize = this._textDefSize;
+
 
 
     constructor(props: Readonly<SquareDisplayerProp>) {
         super(props);
+        const row = this.props.square.getPosition().getRow();
+        const col = this.props.square.getPosition().getCol();
         this.state = {
             width: 0,
             height: 0,
-            marker: this.props.square.getMarker(),
+            marker: this.props.game.getBoard().getGrid()[row][col].getMarker(),
             game: this.props.game,
         };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -42,20 +48,17 @@ export default class SquareDisplayer extends React.Component<SquareDisplayerProp
     };
 
     handler = () => {
-        // if (this.props.game.emptySquare(this.props.square.getPosition())) {
-        // }
-        console.log(this.props.game);
         this.props.game.tick(this.props.square.getPosition());
-        this.setState({
-            marker: this.props.square.getMarker(),
-            game: this.props.game
-        });
-        console.log(this.props.game.getGameStatus());
+        this.props.updateGame();
     };
 
     setSize(): void {
         if (window.innerWidth < 790) {
-            this._size = window.innerWidth * this._ratio - this._spacing;
+            this._size = window.innerWidth * this._squareRatio - this._spacing;
+            this._textSize = this._size * this._textRatio;
+        } else {
+            this._size = this._squareDefSize;
+            this._textSize = this._textDefSize;
         }
     }
 
@@ -79,14 +82,14 @@ export default class SquareDisplayer extends React.Component<SquareDisplayerProp
             width: this._size + 'px',
             height: this._size + 'px',
             backgroundColor: '#8c9eff',
-            fontSize: '50px'
+            fontSize: this._textSize + 'px',
         };
 
+        console.log(this._size);
         return (
             <div onClick={this.handler}>
-                <Grid className={this.name}
-                      style={styles}>
-                    {this.state.marker}
+                <Grid style={styles}>
+                    {this.props.square.getMarker()}
                 </Grid>
             </div>
         );

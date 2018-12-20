@@ -10,11 +10,9 @@ interface AppState {
 }
 
 export default class App extends React.Component<AppProp, AppState> {
-    play = false;
     constructor(props: Readonly<AppProp>) {
         super(props);
-        this.state = {
-        }
+        this.state = {}
     }
     render() {
         return (

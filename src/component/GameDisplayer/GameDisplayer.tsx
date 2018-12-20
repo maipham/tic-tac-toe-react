@@ -7,6 +7,7 @@ import ScoreBoard from "../ScoreBoard/ScoreBoard";
 
 interface GameDisplayerProp {
     game: Game;
+    updateGame: () => void;
 }
 
 interface GameDisplayerState {
@@ -26,7 +27,7 @@ export default class GameDisplayer extends React.Component<GameDisplayerProp, Ga
         return (
 
             <div style={style}>
-                <GameBoard game={this.props.game}/>
+                <GameBoard game={this.props.game} updateGame={this.props.updateGame}/>
             </div>
         );
     }
