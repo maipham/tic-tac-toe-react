@@ -8,6 +8,7 @@
     "@types/node": "^10.12.15",
     "@types/react": "^16.7.17",
     "@types/react-dom": "^16.0.11",
+    "firebase": "^5.7.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-flexview": "^4.0.1",
