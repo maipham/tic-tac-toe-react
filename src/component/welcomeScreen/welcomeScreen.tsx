@@ -20,6 +20,7 @@ interface welcomeScreenState {
 
 export default class welcomeScreen extends React.Component<welcomeScreenProp, welcomeScreenState> {
     status: string = '';
+
     constructor(props: Readonly<welcomeScreenProp>) {
         super(props);
         this.state = {
@@ -30,7 +31,7 @@ export default class welcomeScreen extends React.Component<welcomeScreenProp, we
     };
 
     resetGame = () => {
-        if (this.state.game instanceof  BotGame) {
+        if (this.state.game instanceof BotGame) {
             this.setState({game: new BotGame(), selectedValue: 'bot'});
         } else if (this.state.game instanceof TwoPlayerGame) {
             this.setState({game: new TwoPlayerGame(), selectedValue: 'friend'});
@@ -67,14 +68,22 @@ export default class welcomeScreen extends React.Component<welcomeScreenProp, we
     };
 
     render() {
-        const gameOver = this.state.game.getGameStatus() !== GameStatus.PLAYING;
+        const gameOver = this.state.game.getGameStatus() === GameStatus.PLAYING;
         return (
-            <Grid container={true} justify={'center'} >
-                <Grid item={true} container={true} justify={'center'}>
-                    <Grid item={true} xs={12} >
+            <Grid container={true}
+                  justify={'center'}>
+                <Grid item={true}
+                      container={true}
+                      justify={'center'}>
+                    <Grid item={true}
+                          xs={12}>
                         <h1 style={{fontWeight: 'bold'}}>Tic Tac Toe</h1>
                     </Grid>
-                    <Grid item={true} container={true} justify={'center'} xs={12} style={{width: 'fit-content'}}>
+                    <Grid item={true}
+                          container={true}
+                          justify={'center'}
+                          xs={12}
+                          style={{width: 'fit-content'}}>
                         <Grid item={true}>
                             <FormControlLabel
                                 value="end"
@@ -106,28 +115,49 @@ export default class welcomeScreen extends React.Component<welcomeScreenProp, we
                                 }
                             />
                         </Grid>
-                        <Grid item={true} style={{width: '40px'}}/>
-                        <Grid item={true}>
-                            <Button onClick={this.resetGame}
-                                    color="secondary"
-                                    variant={'contained'}
-                                    style={{marginTop: '6px', marginBottom: '6px',
-                                        paddingBottom: '0', paddingTop: '0'}}>
-                                Reset Game </Button>
-                        </Grid>
+                        <Grid item={true}
+                              style={{width: '40px'}}/>
                     </Grid>
                     <Grid item={true}>
-                        <GameDisplayer game={this.state.game} updateGame={this.updateGame}/>
+                        <GameDisplayer game={this.state.game}
+                                       updateGame={this.updateGame}/>
                     </Grid>
-                    <Grid item={true} xs={12}>
-                        {gameOver &&
-                        <Button onClick={this.resetBoard}
-                                color="secondary"
-                                variant={'contained'}
-                                style={{marginTop: '6px', marginBottom: '6px',
-                                    paddingBottom: '0', paddingTop: '0'}}>
-                            Next Round </Button>
-                        }
+                    <Grid item={true}
+                          container={true} xs={12}>
+                        <Grid container={true}
+                              item={true}
+                              xs={5}
+                              justify={'flex-end'}>
+                            <Grid item={true}>
+                                <Button onClick={this.resetGame}
+                                        color="secondary"
+                                        variant={'contained'}
+                                        style={{
+                                            marginTop: '6px', marginBottom: '6px',
+                                            paddingBottom: '0', paddingTop: '0'
+                                        }}>
+                                    Reset Game </Button>
+                            </Grid>
+                        </Grid>
+
+                        <Grid item={true} xs={2}/>
+
+                        <Grid container={true}
+                              item={true}
+                              xs={5}
+                              justify={'flex-start'}>
+                            <Grid item={true}>
+                                <Button onClick={this.resetBoard}
+                                        color="secondary"
+                                        variant={'contained'}
+                                        disabled={gameOver}
+                                        style={{
+                                            marginTop: '6px', marginBottom: '6px',
+                                            paddingBottom: '0', paddingTop: '0'
+                                        }}>
+                                    Next Round </Button>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>
