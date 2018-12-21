@@ -1,5 +1,7 @@
 ## Tic Tac Toe
 
+Play here -> https://tic-tac-toe-cc.firebaseapp.com/
+
 ![1](https://user-images.githubusercontent.com/34165109/50318433-1aebb480-048f-11e9-9313-66cc5fbfd5d5.PNG)
 
 # How to play
