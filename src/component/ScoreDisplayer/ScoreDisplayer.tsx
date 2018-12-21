@@ -62,6 +62,7 @@ export default class ScoreDisplayer extends React.Component<ScoreProp, ScoreStat
             fontSize: this._textSize + 'px',
             padding: '0',
             margin: '0',
+            width: this._containerSize,
         };
         return (
             <div style={{alignItems: 'center'}}>

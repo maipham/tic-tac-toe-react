@@ -39,7 +39,12 @@ export class Board {
     }
 
     fillSquare(position: Position, marker: MarkerEnum): void {
-        this.fillCount += 1;
+        if (marker !== MarkerEnum.NONE) {
+            this.fillCount += 1;
+        } else if (marker === MarkerEnum.NONE
+        && this.grid[position.getRow()][position.getCol()].getMarker() !== MarkerEnum.NONE) {
+            this.fillCount -= 1;
+        }
         this.grid[position.getRow()][position.getCol()].setMarker(marker);
     }
 

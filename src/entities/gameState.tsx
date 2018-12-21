@@ -11,5 +11,7 @@ export class GameState {
         this.marker = _marker;
         this.position = _position;
     }
-
+    setPos(position: Position): void {
+        this.position = position;
+    }
 }

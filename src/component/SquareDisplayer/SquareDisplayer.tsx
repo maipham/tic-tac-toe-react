@@ -47,6 +47,7 @@ export default class SquareDisplayer extends React.Component<SquareDisplayerProp
     };
 
     handler = () => {
+        console.log(this.props.game.getCurrentPlayer().getPlayerMarker());
         this.props.game.tick(this.props.square.getPosition());
         this.props.updateGame();
         console.log(this.props.game.getGameStatus());
