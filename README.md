@@ -3,10 +3,11 @@
 This is a basic *tic tac toe* game with a bot.
 I implemented *Depth First Search* for the bot to determine its actions. Because I did not maximize the bot performance, so the bot is kind of funny because it rather prevents you from winning than winning itself. So yeah, you can win the bot!
 Libraries that I used:
-- [React] (https://reactjs.org/)
-- [Material UI] (https://material-ui.com/)
+- [React](https://reactjs.org/)
+- [Material UI](https://material-ui.com/)  
+
 Deployment:
-- [Firebase] (https://firebase.google.com/)
+- [Firebase](https://firebase.google.com/)
 
 
 Play here -> https://tic-tac-toe-cc.firebaseapp.com/
