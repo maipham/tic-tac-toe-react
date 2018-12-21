@@ -40,6 +40,9 @@ export default class welcomeScreen extends React.Component<welcomeScreenProp, we
     resetBoard = () => {
         this.state.game.newBoard();
         this.state.game.setGameStatus(GameStatus.PLAYING);
+        if (this.state.game instanceof BotGame) {
+            this.state.game.setCurrentPlayer(this.state.game.getPlayer1());
+        }
         this.updateGame();
     };
 
@@ -99,14 +102,15 @@ export default class welcomeScreen extends React.Component<welcomeScreenProp, we
                                         onChange={this.playWithBot}
                                         value="b"
                                         name="radio-button-demo"
-                                        aria-label="B"
-                                    />
+                                        aria-label="B"/>
                                 }
                             />
                         </Grid>
-                        <Grid item={true} style={{width: '30px'}}/>
+                        <Grid item={true} style={{width: '40px'}}/>
                         <Grid item={true}>
                             <Button onClick={this.resetGame}
+                                    color="secondary"
+                                    variant={'contained'}
                                     style={{marginTop: '6px', marginBottom: '6px',
                                         paddingBottom: '0', paddingTop: '0'}}>
                                 Reset Game </Button>
@@ -115,9 +119,11 @@ export default class welcomeScreen extends React.Component<welcomeScreenProp, we
                     <Grid item={true}>
                         <GameDisplayer game={this.state.game} updateGame={this.updateGame}/>
                     </Grid>
-                    <Grid item={true}>
+                    <Grid item={true} xs={12}>
                         {gameOver &&
                         <Button onClick={this.resetBoard}
+                                color="secondary"
+                                variant={'contained'}
                                 style={{marginTop: '6px', marginBottom: '6px',
                                     paddingBottom: '0', paddingTop: '0'}}>
                             Next Round </Button>

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^3.6.2",
+    "@material-ui/core": "^3.7.0",
     "@types/jest": "^23.3.10",
     "@types/node": "^10.12.15",
     "@types/react": "^16.7.17",
@@ -16,6 +16,8 @@
     "typescript": "^3.2.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -29,5 +31,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "homepare": "https://maipham.github.io/tic-tac-toe-react"
 }
