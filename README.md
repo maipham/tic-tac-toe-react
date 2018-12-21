@@ -11,6 +11,10 @@ Libraries that I used:
 Deployment:
 - [Firebase](https://firebase.google.com/)
 
+To play around with the code:
+- Clone this repo
+- Run npm install
+- Run npm start
 
 Play here -> https://tic-tac-toe-cc.firebaseapp.com/
 
