@@ -2,7 +2,7 @@ import {Player} from "./player";
 import {Position} from './position';
 import {Board} from "./board";
 import {MarkerEnum} from "./marker.enum";
-import {GameState} from "./GameState";
+import {GameState} from "./gameState";
 import {Game} from "./game";
 import {Referee} from "./referee";
 

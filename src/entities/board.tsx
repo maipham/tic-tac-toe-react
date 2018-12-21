@@ -1,6 +1,6 @@
-import {Position} from './Position';
+import {Position} from './position';
 import {MarkerEnum} from "./marker.enum";
-import GridSquare from "./GridSquare";
+import GridSquare from "./gridSquare";
 
 export class Board {
     private fillCount = 0;

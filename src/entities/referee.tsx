@@ -1,6 +1,6 @@
 import {Game} from './game';
-import {GameStatus} from './GameStatus.enum';
-import {Board} from './Board';
+import {GameStatus} from './gameStatus.enum';
+import {Board} from './board';
 import {MarkerEnum} from "./marker.enum";
 
 export class Referee {

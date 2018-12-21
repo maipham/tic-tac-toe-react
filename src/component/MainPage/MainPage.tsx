@@ -5,9 +5,9 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Grid from '@material-ui/core/Grid';
 import GameDisplayer from "../GameDisplayer/GameDisplayer";
 import {Game} from "../../entities/game";
-import {TwoPlayerGame} from "../../entities/TwoPlayerGame";
-import {BotGame} from "../../entities/BotGame";
-import {GameStatus} from "../../entities/GameStatus.enum";
+import {TwoPlayerGame} from "../../entities/twoPlayerGame";
+import {BotGame} from "../../entities/botGame";
+import {GameStatus} from "../../entities/gameStatus.enum";
 import Button from '@material-ui/core/Button';
 
 interface MainPageProp {

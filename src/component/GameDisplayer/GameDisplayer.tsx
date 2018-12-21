@@ -1,9 +1,9 @@
 import * as React from 'react';
 import './GameDisplayer.css';
-import {Game} from "../../entities/Game";
+import {Game} from "../../entities/game";
 import BoardDisplayer from "../BoardDisplayer/BoardDisplayer";
 import ScoreDisplayer from "../ScoreDisplayer/ScoreDisplayer";
-import {GameStatus} from "../../entities/GameStatus.enum";
+import {GameStatus} from "../../entities/gameStatus.enum";
 
 interface GameDisplayerProp {
     game: Game;

@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7522aed-fa9a-422f-8ce4-70a2f5b12379" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/GameDisplayer/GameDisplayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GameDisplayer/GameDisplayer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/MainPage/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/board.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/BotGame.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/botGame.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/BotPlayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/botPlayer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Game.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/game.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/GameState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/gameState.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/GameStatus.enum.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/gameStatus.enum.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/GridSquare.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/gridSquare.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/HumanPlayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/humanPlayer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Marker.enum.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/marker.enum.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/player.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Position.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/position.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Referee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/referee.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/TwoPlayerGame.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/twoPlayerGame.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,21 +75,21 @@
     <session id="993531188">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.103" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TypeScriptServerServiceImpl" value="4" />
+          <entry key="TypeScriptServerServiceImpl" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="8" />
+          <entry key="css" value="9" />
           <entry key="html" value="2" />
           <entry key="ico" value="4" />
           <entry key="js" value="4" />
@@ -82,12 +97,12 @@
           <entry key="md" value="1" />
           <entry key="svg" value="1" />
           <entry key="ts" value="4" />
-          <entry key="tsx" value="233" />
+          <entry key="tsx" value="270" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="8" />
+          <entry key="CSS" value="9" />
           <entry key="HTML" value="2" />
           <entry key="Image" value="4" />
           <entry key="JSON" value="7" />
@@ -95,7 +110,7 @@
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SVG" value="1" />
           <entry key="TypeScript" value="4" />
-          <entry key="TypeScript JSX" value="233" />
+          <entry key="TypeScript JSX" value="270" />
           <entry key="tsconfig" value="2" />
         </counts>
       </usages-collector>
@@ -105,7 +120,7 @@
           <entry key="html" value="15" />
           <entry key="js" value="177" />
           <entry key="json" value="130" />
-          <entry key="tsx" value="37004" />
+          <entry key="tsx" value="37359" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -114,7 +129,7 @@
           <entry key="HTML" value="15" />
           <entry key="JSON" value="128" />
           <entry key="JavaScript" value="177" />
-          <entry key="TypeScript JSX" value="37004" />
+          <entry key="TypeScript JSX" value="37359" />
           <entry key="tsconfig" value="2" />
         </counts>
       </usages-collector>
@@ -123,56 +138,97 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/component/Footer/Header.tsx">
+        <entry file="file://$PROJECT_DIR$/src/entities/game.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+            <state>
+              <caret column="24" selection-start-column="24" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entities/gameState.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entities/gameStatus.enum.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entities/gridSquare.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="28" selection-start-column="28" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entities/humanPlayer.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entities/marker.enum.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entities/player.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.tsx">
+        <entry file="file://$PROJECT_DIR$/src/entities/position.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <element signature="e#88#156#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="322">
+              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx">
+        <entry file="file://$PROJECT_DIR$/src/entities/referee.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="115">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.tsx">
+        <entry file="file://$PROJECT_DIR$/src/entities/twoPlayerGame.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/component/welcomeScreen/welcomeScreen.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state>
+              <caret column="28" selection-start-column="28" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -190,11 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/App.test.tsx" />
-        <option value="$PROJECT_DIR$/src/scripts/component-generator.js" />
-        <option value="$PROJECT_DIR$/src/component/Board/Board.tsx" />
-        <option value="$PROJECT_DIR$/scripts/component-generator.js" />
-        <option value="$PROJECT_DIR$/src/component/PlayerX/PlayerX.tsx" />
         <option value="$PROJECT_DIR$/src/entities/player-type.enum.tsx" />
         <option value="$PROJECT_DIR$/src/entities/player-status.enum.tsx" />
         <option value="$PROJECT_DIR$/src/entities/square.tsx" />
@@ -208,31 +259,44 @@
         <option value="$PROJECT_DIR$/src/entities/GameType.enum.tsx" />
         <option value="$PROJECT_DIR$/src/entities/OfflineGame.tsx" />
         <option value="$PROJECT_DIR$/src/entities/OnlineGame.tsx" />
-        <option value="$PROJECT_DIR$/src/entities/GameState.tsx" />
         <option value="$PROJECT_DIR$/src/index.tsx" />
         <option value="$PROJECT_DIR$/src/entities/referee.tsx" />
         <option value="$PROJECT_DIR$/src/entities/AIGame.tsx" />
-        <option value="$PROJECT_DIR$/src/entities/BotGame.tsx" />
         <option value="$PROJECT_DIR$/src/entities/AIPlayer.tsx" />
-        <option value="$PROJECT_DIR$/src/entities/TwoPlayerGame.tsx" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/component/GameDisplayer/GameDisplayer.tsx" />
         <option value="$PROJECT_DIR$/src/component/ScoreBoard/ScoreBoard.tsx" />
-        <option value="$PROJECT_DIR$/src/component/GameBoard/GameBoard.tsx" />
         <option value="$PROJECT_DIR$/src/entities/game.tsx" />
-        <option value="$PROJECT_DIR$/src/entities/BotPlayer.tsx" />
         <option value="$PROJECT_DIR$/src/entities/player.tsx" />
         <option value="$PROJECT_DIR$/src/entities/marker.enum.tsx" />
         <option value="$PROJECT_DIR$/src/entities/humanPlayer.tsx" />
-        <option value="$PROJECT_DIR$/src/entities/board.tsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
         <option value="$PROJECT_DIR$/src/component/Footer/Footer.tsx" />
-        <option value="$PROJECT_DIR$/src/component/welcomeScreen/welcomeScreen.tsx" />
         <option value="$PROJECT_DIR$/src/component/Footer/Header.tsx" />
+        <option value="$PROJECT_DIR$/src/component/welcomeScreen/welcomeScreen.tsx" />
+        <option value="$PROJECT_DIR$/src/component/welcomeScreen/mainPage.tsx" />
+        <option value="$PROJECT_DIR$/src/component/GameBoard/GameBoard.tsx" />
+        <option value="$PROJECT_DIR$/src/component/GameBoard/BoardDisplayer.tsx" />
+        <option value="$PROJECT_DIR$/src/component/ScoreDisplayer/ScoreBoard.tsx" />
+        <option value="$PROJECT_DIR$/src/component/MainPage/mainPage.tsx" />
+        <option value="$PROJECT_DIR$/src/entities/Board.tsx" />
+        <option value="$PROJECT_DIR$/src/component/ScoreDisplayer/ScoreDisplayer.tsx" />
+        <option value="$PROJECT_DIR$/src/component/MainPage/MainPage.tsx" />
+        <option value="$PROJECT_DIR$/src/component/BoardDisplayer/BoardDisplayer.tsx" />
+        <option value="$PROJECT_DIR$/src/entities/HumanPlayer.tsx" />
+        <option value="$PROJECT_DIR$/src/entities/GridSquare.tsx" />
+        <option value="$PROJECT_DIR$/src/entities/GameState.tsx" />
         <option value="$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx" />
+        <option value="$PROJECT_DIR$/src/entities/BotPlayer.tsx" />
+        <option value="$PROJECT_DIR$/src/entities/BotGame.tsx" />
+        <option value="$PROJECT_DIR$/src/entities/board.tsx" />
+        <option value="$PROJECT_DIR$/src/entities/Game.tsx" />
+        <option value="$PROJECT_DIR$/src/entities/Player.tsx" />
+        <option value="$PROJECT_DIR$/src/entities/Referee.tsx" />
+        <option value="$PROJECT_DIR$/src/entities/TwoPlayerGame.tsx" />
       </list>
     </option>
   </component>
@@ -253,9 +317,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -279,6 +343,12 @@
               <item name="tic-tac-toe-react" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tic-tac-toe-react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic-tac-toe-react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -297,7 +367,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Mai\tic-tac-toe\node_modules\prettier" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\Mai\Desktop\tic-tac-toe\tic-tac-toe-react\node_modules\typescript\lib" />
     <property name="typescript-compiler-editor-notification" value="false" />
   </component>
   <component name="RecentsManager">
@@ -337,11 +407,12 @@
       <workItem from="1544939546024" duration="35223000" />
       <workItem from="1545095759425" duration="82883000" />
       <workItem from="1545357026630" duration="1998000" />
+      <workItem from="1545367489686" duration="246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138021000" />
+    <option name="totallyTimeSpent" value="139103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -362,7 +433,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299566" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3299566" />
       <window_info anchor="bottom" id="Floobits" order="12" weight="0.3299566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -401,7 +472,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/component/welcomeScreen/welcomeScreen.tsx</url>
+          <url>file://$PROJECT_DIR$/src/component/MainPage/MainPage.tsx</url>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -430,9 +501,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/ScoreBoard/ScoreBoard.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/react-app-env.d.ts">
@@ -468,131 +536,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/GameDisplayer/GameDisplayer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/ScoreBoard/ScoreBoard.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-193">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/GameBoard/GameBoard.css">
+    <entry file="file://$PROJECT_DIR$/src/component/BoardDisplayer/BoardDisplayer.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logo.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entities/player-status.enum.tsx" />
-    <entry file="file://$PROJECT_DIR$/src/entities/player.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/TwoPlayerGame.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/referee.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/GameBoard/GameBoard.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/humanPlayer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/BotGame.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/position.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/board.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1840">
-          <caret line="80" column="33" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/game.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/BotPlayer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/marker.enum.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/game-status.enum.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/GameState.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/gridSquare.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -626,33 +576,9 @@
     <entry file="file://$PROJECT_DIR$/build/asset-manifest.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/Icon/Icon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3044" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/welcomeScreen/welcomeScreen.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Footer/Header.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -662,23 +588,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.tsx">
+    <entry file="file://$PROJECT_DIR$/src/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#88#156#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="138">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/ScoreDisplayer/ScoreDisplayer.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/ScoreDisplayer/ScoreDisplayer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/MainPage/MainPage.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Footer/Header.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/BoardDisplayer/BoardDisplayer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/GameDisplayer/GameDisplayer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/botPlayer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/botGame.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/board.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/game.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/gameState.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/gameStatus.enum.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/gridSquare.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/humanPlayer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/marker.enum.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/player.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/twoPlayerGame.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/position.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/referee.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
