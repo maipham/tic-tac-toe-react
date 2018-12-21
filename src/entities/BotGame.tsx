@@ -1,6 +1,6 @@
 import {Position} from "./position";
 import {Game} from "./game";
-import {GameStatus} from "./game-status.enum";
+import {GameStatus} from "./GameStatus.enum";
 import BotPlayer from "./BotPlayer";
 import {MarkerEnum} from "./marker.enum";
 

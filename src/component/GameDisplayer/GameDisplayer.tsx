@@ -1,9 +1,9 @@
 import * as React from 'react';
 import './GameDisplayer.css';
-import {Game} from "../../entities/game";
-import GameBoard from "../GameBoard/GameBoard";
-import ScoreBoard from "../ScoreBoard/ScoreBoard";
-import {GameStatus} from "../../entities/game-status.enum";
+import {Game} from "../../entities/Game";
+import BoardDisplayer from "../BoardDisplayer/BoardDisplayer";
+import ScoreDisplayer from "../ScoreDisplayer/ScoreDisplayer";
+import {GameStatus} from "../../entities/GameStatus.enum";
 
 interface GameDisplayerProp {
     game: Game;
@@ -61,10 +61,10 @@ export default class GameDisplayer extends React.Component<GameDisplayerProp, Ga
 
         return (
             <div style={style}>
-                <ScoreBoard player1={this.props.game.getPlayer1()}
-                            player2={this.props.game.getPlayer2()}
-                            updateGame={this.props.updateGame}/>
-                <GameBoard game={this.props.game} updateGame={this.props.updateGame}/>
+                <ScoreDisplayer player1={this.props.game.getPlayer1()}
+                                player2={this.props.game.getPlayer2()}
+                                updateGame={this.props.updateGame}/>
+                <BoardDisplayer game={this.props.game} updateGame={this.props.updateGame}/>
             </div>
         );
     }

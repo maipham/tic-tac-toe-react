@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7522aed-fa9a-422f-8ce4-70a2f5b12379" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Footer/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Footer/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -82,6 +79,7 @@
           <entry key="ico" value="4" />
           <entry key="js" value="4" />
           <entry key="json" value="9" />
+          <entry key="md" value="1" />
           <entry key="svg" value="1" />
           <entry key="ts" value="4" />
           <entry key="tsx" value="233" />
@@ -94,6 +92,7 @@
           <entry key="Image" value="4" />
           <entry key="JSON" value="7" />
           <entry key="JavaScript" value="4" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="SVG" value="1" />
           <entry key="TypeScript" value="4" />
           <entry key="TypeScript JSX" value="233" />
@@ -106,7 +105,7 @@
           <entry key="html" value="15" />
           <entry key="js" value="177" />
           <entry key="json" value="130" />
-          <entry key="tsx" value="37002" />
+          <entry key="tsx" value="37004" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -115,7 +114,7 @@
           <entry key="HTML" value="15" />
           <entry key="JSON" value="128" />
           <entry key="JavaScript" value="177" />
-          <entry key="TypeScript JSX" value="37002" />
+          <entry key="TypeScript JSX" value="37004" />
           <entry key="tsconfig" value="2" />
         </counts>
       </usages-collector>
@@ -123,10 +122,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/Footer/Header.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
+            <state relative-caret-position="621">
               <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -138,8 +137,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="345">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
                 <element signature="e#88#156#0" expanded="true" />
@@ -148,11 +147,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="161">
+              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -227,13 +226,13 @@
         <option value="$PROJECT_DIR$/src/entities/marker.enum.tsx" />
         <option value="$PROJECT_DIR$/src/entities/humanPlayer.tsx" />
         <option value="$PROJECT_DIR$/src/entities/board.tsx" />
-        <option value="$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
         <option value="$PROJECT_DIR$/src/component/Footer/Footer.tsx" />
         <option value="$PROJECT_DIR$/src/component/welcomeScreen/welcomeScreen.tsx" />
         <option value="$PROJECT_DIR$/src/component/Footer/Header.tsx" />
+        <option value="$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx" />
       </list>
     </option>
   </component>
@@ -273,37 +272,12 @@
             <path>
               <item name="tic-tac-toe-react" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic-tac-toe-react" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic-tac-toe-react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic-tac-toe-react" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic-tac-toe-react" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic-tac-toe-react" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic-tac-toe-react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic-tac-toe-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic-tac-toe-react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic-tac-toe-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="Footer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic-tac-toe-react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic-tac-toe-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="SquareDisplayer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -367,12 +341,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137113000" />
+    <option name="totallyTimeSpent" value="138021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20356907" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20356907" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -387,7 +362,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299566" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3299566" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Floobits" order="12" weight="0.3299566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -433,7 +408,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/component/Board/Board.tsx" />
     <entry file="file://$PROJECT_DIR$/src/component/Board/Board.css" />
     <entry file="file://$PROJECT_DIR$/src/component/PlayerInfoDisplayer/PlayerInfoDisplayer.tsx" />
     <entry file="file://$PROJECT_DIR$/src/entities/mai.tsx" />
@@ -664,27 +638,6 @@
         <state relative-caret-position="-3044" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#88#156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/welcomeScreen/welcomeScreen.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -694,8 +647,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Footer/Header.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
+        <state relative-caret-position="621">
           <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#88#156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/SquareDisplayer/SquareDisplayer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

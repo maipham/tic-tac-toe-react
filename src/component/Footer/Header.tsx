@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Footer.css';
+import './Header.css';
 import Grid from '@material-ui/core/Grid'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';

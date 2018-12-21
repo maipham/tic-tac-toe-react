@@ -1,4 +1,4 @@
-import {GameStatus} from './game-status.enum';
+import {GameStatus} from './GameStatus.enum';
 import {Position} from "./position";
 import {Game} from "./game";
 import {MarkerEnum} from "./marker.enum";

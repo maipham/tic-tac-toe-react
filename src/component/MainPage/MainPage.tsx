@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './welcomeScreen.css';
+import './MainPage.css';
 import Radio from '@material-ui/core/Radio';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Grid from '@material-ui/core/Grid';
@@ -7,21 +7,21 @@ import GameDisplayer from "../GameDisplayer/GameDisplayer";
 import {Game} from "../../entities/game";
 import {TwoPlayerGame} from "../../entities/TwoPlayerGame";
 import {BotGame} from "../../entities/BotGame";
-import {GameStatus} from "../../entities/game-status.enum";
+import {GameStatus} from "../../entities/GameStatus.enum";
 import Button from '@material-ui/core/Button';
 
-interface welcomeScreenProp {
+interface MainPageProp {
 }
 
-interface welcomeScreenState {
+interface MainPageState {
     game: Game;
     selectedValue: string;
 }
 
-export default class welcomeScreen extends React.Component<welcomeScreenProp, welcomeScreenState> {
+export default class MainPage extends React.Component<MainPageProp, MainPageState> {
     status: string = '';
 
-    constructor(props: Readonly<welcomeScreenProp>) {
+    constructor(props: Readonly<MainPageProp>) {
         super(props);
         this.state = {
             game: new TwoPlayerGame(),
@@ -139,9 +139,7 @@ export default class welcomeScreen extends React.Component<welcomeScreenProp, we
                                     Reset Game </Button>
                             </Grid>
                         </Grid>
-
                         <Grid item={true} xs={2}/>
-
                         <Grid container={true}
                               item={true}
                               xs={5}

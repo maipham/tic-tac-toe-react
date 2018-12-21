@@ -1,28 +1,26 @@
 import * as React from 'react';
-import './ScoreBoard.css';
+import './ScoreDisplayer.css';
 import {Player} from "../../entities/player";
 import Grid from '@material-ui/core/Grid';
 
-interface ScoreBoardProp {
+interface ScoreProp {
     player1: Player;
     player2: Player;
-
     updateGame: () => void;
-
 }
 
-interface ScoreBoardState {
+interface ScoreState {
     width: number;
     height: number;
 }
 
-export default class ScoreBoard extends React.Component<ScoreBoardProp, ScoreBoardState> {
+export default class ScoreDisplayer extends React.Component<ScoreProp, ScoreState> {
     _textDefSize = 35;
     _textRatio = 1 / 20;
     _textSize = this._textDefSize;
     _containerSize = this._textDefSize * 3;
 
-    constructor(props: Readonly<ScoreBoardProp>) {
+    constructor(props: Readonly<ScoreProp>) {
         super(props);
         this.state = {
             width: 0,

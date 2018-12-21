@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 const logo = require('./logo.svg');
-import WelcomeScreen from "./component/welcomeScreen/welcomeScreen";
+import WelcomeScreen from "./component/MainPage/MainPage";
 import Header from "./component/Footer/Header";
 
 interface AppProp {

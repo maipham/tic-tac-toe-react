@@ -1,4 +1,4 @@
-import {MarkerEnum} from "./marker.enum";
+import {MarkerEnum} from "./Marker.enum";
 import {Game} from "./game";
 
 export abstract class Player {

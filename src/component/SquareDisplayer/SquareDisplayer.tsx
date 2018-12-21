@@ -92,7 +92,6 @@ export default class SquareDisplayer extends React.Component<SquareDisplayerProp
             height: this._size + 'px',
             backgroundColor: '#8c9eff',
             fontSize: this._textSize + 'px',
-            color: '#283593',
             fontFamily: 'Quicksand, sans-serif'
         };
 

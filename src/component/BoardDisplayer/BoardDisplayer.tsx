@@ -1,26 +1,26 @@
 import * as React from 'react';
-import './GameBoard.css';
+import './BoardDisplayer.css';
 import GridSquare from "../../entities/gridSquare";
 import SquareDisplayer from "../SquareDisplayer/SquareDisplayer";
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import {Game} from "../../entities/game";
 
-interface GameBoardProp {
+interface BoardProp {
     game: Game;
     updateGame: () => void;
 
 }
 
-interface GameBoardState {
+interface BoardState {
     width: number;
     height: number;
 
 }
 
-export default class GameBoard extends React.Component<GameBoardProp, GameBoardState> {
+export default class BoardDisplayer extends React.Component<BoardProp, BoardState> {
 
-    constructor(props: Readonly<GameBoardProp>) {
+    constructor(props: Readonly<BoardProp>) {
         super(props);
         this.state = {
             width: 0,

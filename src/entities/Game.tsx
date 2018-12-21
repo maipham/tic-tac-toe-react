@@ -1,8 +1,8 @@
-import {Player} from './player';
-import {Referee} from './referee';
-import {GameStatus} from './game-status.enum';
+import {Player} from './Player';
+import {Referee} from './Referee';
+import {GameStatus} from './GameStatus.enum';
 import {Board} from './board';
-import HumanPlayer from "./humanPlayer";
+import HumanPlayer from "./HumanPlayer";
 import {Position} from "./position";
 import {MarkerEnum} from "./marker.enum";
 
